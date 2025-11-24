@@ -1,6 +1,6 @@
-import Header from '~/components/Layout/DefaultLayout/Header';
+import Header from '~/components/Layout/components/Header';
 
-function DefaultLayout({ chilrden }) {
+function HeaderOnly({ chilrden }) {
     return (
         <div>
             <Header />
@@ -11,4 +11,4 @@ function DefaultLayout({ chilrden }) {
     );
 }
 
-export default DefaultLayout;
+export default HeaderOnly;
