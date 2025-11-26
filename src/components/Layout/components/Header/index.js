@@ -9,7 +9,6 @@ import {
     faEarthAsia,
     faCircleQuestion,
     faKeyboard,
-    faCloudArrowUp,
     faUser,
     faCoins,
     faGear,
@@ -25,6 +24,8 @@ import styles from './Header.module.scss';
 import images from '~/assets/image';
 import AccountItem from '../AccountItem';
 import Menu from '~/components/Popper/Menu';
+import { UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -129,7 +130,7 @@ function Header() {
                         <>
                             <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudArrowUp} />
+                                    <UploadIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -141,10 +142,11 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
-                                src="https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/a0472cf5035ba062d58cf7cff333a7f0~tplv-tiktokx-cropcenter:100:100.jpeg?dr=14579&refresh_token=4ecddc63&x-expires=1764334800&x-signature=IUGkJzLCWZrR%2BA8pMKg9uXnWPyY%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my3"
+                                src="https://p16-sign-sg.atiktokcdn.com/tos-alisg-avt-0068/a0472cf5035ba062d58cf7cff333a7f0~tplv-tiktokx-cropcenter:100:100.jpeg?dr=14579&refresh_token=4ecddc63&x-expires=1764334800&x-signature=IUGkJzLCWZrR%2BA8pMKg9uXnWPyY%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my3"
                                 alt="User Avatar"
+                                fallback="https://www.gravatar.com/avatar/7ab6f7adf67eb257f2cb5870d2c0871401fc82deb8f2a3ee3e2d3e41be609cec.jpg?s=80&d=mp&r=g"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
