@@ -6,13 +6,13 @@ import Sidebar from './Sidebar';
 
 const cx = classNames.bind(styles);
 
-function DefaultLayout({ chilrden }) {
+function DefaultLayout({ children }) {
     return (
         <div className={cx('wrapper')}>
             <Header />
             <div className={cx('container')}>
                 <Sidebar />
-                <div className={cx('content')}>{chilrden}</div>
+                <div className={cx('content')}>{children}</div>
             </div>
         </div>
     );
